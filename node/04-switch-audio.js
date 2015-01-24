@@ -6,6 +6,7 @@ var Gpio     = require('onoff').Gpio,
     filename = process.argv[2];				// Get filename from command line arguments
 
 if (!filename) {
+	console.log('Incorrect number of arguments. Usage: node 04-switch-audio.rb song.mp3');
 	exit();
 }
 
