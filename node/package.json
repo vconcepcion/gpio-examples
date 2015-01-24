@@ -1,0 +1,3 @@
+{ "name" : "gpio-examples"
+, "version" : "1.0.0"
+, "dependencies" : { "onoff" : "*" , "lame" : "*" , "speaker" : "*" } }

@@ -5,6 +5,10 @@ var Gpio     = require('onoff').Gpio,
     button   = new Gpio(18, 'in', 'both'),	// Run `gpio readall` to confirm BCM pin number(s)
     filename = process.argv[2];				// Get filename from command line arguments
 
+if (!filename) {
+	exit();
+}
+
 // Watch for button state to change from "0" to "1"
 button.watch(function(err, value) {
 	if (err) exit();

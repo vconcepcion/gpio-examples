@@ -1,11 +1,12 @@
 import RPi.GPIO as GPIO
 import sys
 import time
+import argparse
 import pygame.mixer
 
 # Run `gpio readall` to confirm pin number(s)
-pinIn = 18	# button
-pinOut = 17	# LED
+pinIn = 18  # button
+pinOut = 17 # LED
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -16,8 +17,12 @@ GPIO.setup(pinOut, GPIO.OUT)
 # frequency (48 KHz), size (unsigned 16-bit), channels (2=stereo), buffer size (1024)
 pygame.mixer.init(48000, -16, 2, 1024)
 
+parser = argparse.ArgumentParser()
+parser.add_argument('filename', help='path to audio file')
+args = parser.parse_args()
+
 # Get filename from command line arguments
-filename = sys.argv[1]
+filename = args.filename
 pygame.mixer.music.load(filename)
 
 print("Ready")
