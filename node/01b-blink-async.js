@@ -19,5 +19,5 @@ var Gpio = require('onoff').Gpio,
 
     setTimeout(function() {
         blink(count - 1);   // Recursively countdown number of blinks
-    }, 500);                // 500ms delay between blinks
-})(5);  // Number of times to blink
+    }, 500);                // 500ms delay between toggles
+})(10);  // Number of times to toggle
