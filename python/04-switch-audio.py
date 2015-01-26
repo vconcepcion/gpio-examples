@@ -14,8 +14,8 @@ GPIO.setup(pinIn, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 GPIO.setup(pinOut, GPIO.OUT)
 
 # Audio setup:
-# frequency (48 KHz), size (unsigned 16-bit), channels (2=stereo), buffer size (1024)
-pygame.mixer.init(48000, -16, 2, 1024)
+# frequency (11 KHz), size (unsigned 16-bit), channels (2=stereo), buffer size (1024)
+pygame.mixer.init(11025, -16, 2, 1024)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('filename', help='path to audio file')
