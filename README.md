@@ -30,7 +30,6 @@ Read input from a button/switch
 ![Switch](/img/02-switch.png?raw=true "Switch")
 2. Run one of the following code samples
 
-**NOTE**: If using NodeJS, first run: `gpio mode 1 down`
 ```
 sudo python python/02a-switch.py
 
@@ -38,6 +37,7 @@ sudo python python/02b-switch-async.py
 
 sudo ruby ruby/02-switch.rb
 
+gpio mode 1 down
 node node/02-switch.js
 ```
 
@@ -48,12 +48,12 @@ Blink an LED based on input from a button/switch
 ![Switch LED](/img/03-switch-led.png?raw=true "Switch LED")
 2. Run one of the following code samples
 
-**NOTE**: If using NodeJS, first run: `gpio mode 1 down`
 ```
 sudo python python/03-switch-led.py
 
 sudo ruby ruby/03-switch-led.rb
 
+gpio mode 1 down
 node node/03-switch-led.js
 ```
 
@@ -69,11 +69,11 @@ wget http://goo.gl/MOXGX3 -O ~/audio/example.mp3 --no-check-certificate
 ```
 3. Run one of the following code samples
 
-**NOTE**: If using NodeJS, first run: `gpio mode 1 down`
 ```
 sudo python python/04-switch-audio.py ~/audio/example.mp3
 
 sudo ruby ruby/04-switch-audio.rb ~/audio/example.mp3
 
-node ruby/04-switch-audio.js ~/audio/example.mp3
+gpio mode 1 down
+node node/04-switch-audio.js ~/audio/example.mp3
 ```
