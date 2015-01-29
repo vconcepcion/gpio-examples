@@ -77,3 +77,22 @@ sudo ruby ruby/04-switch-audio.rb ~/audio/example.mp3
 gpio mode 1 down
 node node/04-switch-audio.js ~/audio/example.mp3
 ```
+
+## 05 - Switch stream
+Stream button input to a web page
+
+1. Build the circuit
+![Switch stream](/img/05-switch-stream.png?raw=true "Switch stream")
+2. Run the following
+
+```
+gpio export 18 in
+gpio export 17 out
+node node/05-switch-stream.js
+```
+3. Find the IP address of your pi by running `ip addr show`
+```
+eth0: ...
+    inet **192.168.1.21**/24 ...
+```
+4. Go to http://[your_ip_address]:8080/ to view button logging
