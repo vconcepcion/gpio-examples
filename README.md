@@ -10,9 +10,9 @@ gpio-examples
 ## 01 - Blink
 Make an LED blink 5 times
 
-1. Build the circuit
+* Build the circuit
 ![Blink](/img/01-blink.png?raw=true "Blink")
-2. Run one of the following code samples
+* Run one of the following code samples
 ```
 sudo python python/01-blink.py
 
@@ -26,9 +26,9 @@ node node/01b-blink-async.js
 ## 02 - Switch
 Read input from a button/switch
 
-1. Build the circuit
+* Build the circuit
 ![Switch](/img/02-switch.png?raw=true "Switch")
-2. Run one of the following code samples
+* Run one of the following code samples
 
 ```
 sudo python python/02a-switch.py
@@ -44,9 +44,9 @@ node node/02-switch.js
 ## 03 - Switch LED
 Blink an LED based on input from a button/switch
 
-1. Build the circuit
+* Build the circuit
 ![Switch LED](/img/03-switch-led.png?raw=true "Switch LED")
-2. Run one of the following code samples
+* Run one of the following code samples
 
 ```
 sudo python python/03-switch-led.py
@@ -60,14 +60,14 @@ node node/03-switch-led.js
 ## 04 - Switch audio
 Play an MP3 file based on input from a button/switch
 
-1. Build the circuit
+* Build the circuit
 ![Switch audio](/img/04-switch-audio.png?raw=true "Switch audio")
-2. Download a sample audio file
+* Download a sample audio file
 ```
 mkdir ~/audio
 wget http://goo.gl/MOXGX3 -O ~/audio/example.mp3 --no-check-certificate
 ```
-3. Run one of the following code samples
+* Run one of the following code samples
 
 ```
 sudo python python/04-switch-audio.py ~/audio/example.mp3
@@ -81,18 +81,18 @@ node node/04-switch-audio.js ~/audio/example.mp3
 ## 05 - Switch stream
 Stream button input to a web page
 
-1. Build the circuit
+* Build the circuit
 ![Switch stream](/img/05-switch-stream.png?raw=true "Switch stream")
-2. Run the following
+* Run the following
 
 ```
 gpio export 18 in
 gpio export 17 out
 node node/05-switch-stream.js
 ```
-3. Find the IP address of your pi by running `ip addr show`
+* Find the IP address (e.g., 192.168.1.21) of your pi by running `ip addr show`
 ```
 eth0: ...
-    inet **192.168.1.21**/24 ...
+    inet 192.168.1.21/24 ...
 ```
-4. Go to http://[your_ip_address]:8080/ to view button logging
+* Go to http://[your_ip_address]:8080/ to view button logging
