@@ -1,3 +1,10 @@
-{ "name" : "gpio-examples"
-, "version" : "1.0.0"
-, "dependencies" : { "onoff" : "*" , "lame" : "*" , "speaker" : "*" } }
+{
+  "name": "gpio-examples",
+  "version": "1.0.0",
+  "dependencies": {
+    "gpio-stream": "^1.0.14",
+    "lame": "^1.1.2",
+    "onoff": "^1.0.0",
+    "speaker": "^0.2.2"
+  }
+}

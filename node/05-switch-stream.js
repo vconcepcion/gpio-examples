@@ -1,3 +1,10 @@
+/* See full tutorial at:
+   https://learn.adafruit.com/node-embedded-development
+
+   Before running this, run the following commands:
+     $ gpio export 18 in
+     $ gpio export 17 out
+*/
 var GpioStream = require('gpio-stream'),
     http = require('http'),
     button = GpioStream.readable(18),
