@@ -83,16 +83,16 @@ Stream button input to a web page
 
 * Build the circuit
 ![Switch stream](/img/05-switch-stream.png?raw=true "Switch stream")
+* Find the IP address (e.g., 192.168.1.21) of your pi by running `ip addr show`
+```
+eth0: ...
+    inet 192.168.1.21/24 ...
+```
 * Run the following
 
 ```
 gpio export 18 in
 gpio export 17 out
 node node/05-switch-stream.js
-```
-* Find the IP address (e.g., 192.168.1.21) of your pi by running `ip addr show`
-```
-eth0: ...
-    inet 192.168.1.21/24 ...
 ```
 * Go to http://[your_ip_address]:8080/ to view button logging
