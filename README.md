@@ -1,11 +1,14 @@
 gpio-examples
 =============
+A collection of examples in Python, Ruby, and Node, introducing the use of the Raspberry Pi GPIO interface.
+Slides and more information at: http://bit.ly/1wTL57E.
 
 ## Requirements
 * [Raspbian OS](http://www.raspberrypi.org/downloads/)
 * [Wiring Pi](http://wiringpi.com/)
 * [Ruby](https://www.ruby-lang.org/en/documentation/installation/#apt)
 * [NodeJS](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions)
+* See individual examples for required Ruby Gems and Node packages
 
 ## 01 - Blink
 Make an LED blink 5 times
@@ -121,3 +124,8 @@ cd ~/gpio-examples/ruby
 mkdir tmp
 sudo ruby 06-room-reservations.rb
 ```
+
+## Contact Information
+Email me if you have any questions.
+Valerie Concepcion
+valerie.concepcion@gmail.com
