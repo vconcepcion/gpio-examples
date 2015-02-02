@@ -96,3 +96,28 @@ gpio export 17 out
 node node/05-switch-stream.js
 ```
 * Go to http://[your_ip_address]:8080/ to view button logging
+
+## 06 - Room reservations
+Use the Google Calendar API to pull event data and light an LED if a
+room is reserved on the calendar (i.e., event is currently in progress)
+
+* Build the circuit
+![Room reservations](/img/06-room-reservations.png?raw=true "Room reservations")
+* Go to https://console.developers.google.com/project to create a new project
+![Create project](/img/create-project.png?raw=true "Create project")
+* Enable the Calendar API
+![Calendar API](/img/calendar-api.png?raw=true "Calendar API")
+* Create an API access key
+![Public API key](/img/public-api-key.png?raw=true "Public API key")
+* Update the `CALENDAR_ID` and `API_KEY` values
+```
+CALENDAR_ID = "__YOUR_CALENDAR_ID__"
+API_KEY = "__YOUR_API_KEY__"
+```
+* Run the following
+
+```
+cd ~/gpio-examples/ruby
+mkdir tmp
+sudo ruby 06-room-reservations.rb
+```
