@@ -8,7 +8,6 @@ Slides and more information at: http://bit.ly/1wTL57E.
 * [Wiring Pi](http://wiringpi.com/)
 * [Ruby](https://www.ruby-lang.org/en/documentation/installation/#apt)
 * [NodeJS](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions)
-* See individual examples for required Ruby Gems and Node packages
 
 ## 01 - Blink
 Make an LED blink 5 times
@@ -82,7 +81,7 @@ node node/04-switch-audio.js ~/audio/example.mp3
 ```
 
 ## 05 - Switch stream
-Stream button input to a web page
+Stream button input to a web page (Full tutorial: https://learn.adafruit.com/node-embedded-development/why-node-dot-js)
 
 * Build the circuit
 ![Switch stream](/img/05-switch-stream.png?raw=true "Switch stream")
@@ -126,6 +125,6 @@ sudo ruby 06-room-reservations.rb
 ```
 
 ## Contact Information
-Email me if you have any questions.
-Valerie Concepcion
+Email me if you have any questions.<br />
+Valerie Concepcion<br />
 valerie.concepcion@gmail.com
