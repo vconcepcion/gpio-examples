@@ -24,6 +24,10 @@ node node/01a-blink.js
 
 node node/01b-blink-async.js
 ```
+* High five if: the LED blinked 5 times
+* Can you...
+  * Make it blink more times?
+  * Make it blink faster/slower?
 
 ## 02 - Switch
 Read input from a button/switch
@@ -42,6 +46,10 @@ sudo ruby ruby/02-switch.rb
 gpio mode 1 down
 node node/02-switch.js
 ```
+* High five if: you see "Button pressed" in the terminal whenever you press the button
+* Can you...
+  * Output a count of how many times the button has been pressed?
+  * Only display the text for every other button press?
 
 ## 03 - Switch LED
 Blink an LED based on input from a button/switch
@@ -58,6 +66,9 @@ sudo ruby ruby/03-switch-led.rb
 gpio mode 1 down
 node node/03-switch-led.js
 ```
+* High five if: the LED blinks whenever you press the button
+* Can you...
+  * Keep the LED on until the button is pressed again?
 
 ## 04 - Switch audio
 Play an MP3 file based on input from a button/switch
@@ -79,6 +90,10 @@ sudo ruby ruby/04-switch-audio.rb ~/audio/example.mp3
 gpio mode 1 down
 node node/04-switch-audio.js ~/audio/example.mp3
 ```
+* High five if: the MP3 plays whenever you press the button
+* Can you...
+  * Make it play a different MP3?
+  * Setup multiple buttons that each play a different drum kit sound?
 
 ## 05 - Switch stream
 Stream button input to a web page (Full tutorial: https://learn.adafruit.com/node-embedded-development/why-node-dot-js)
@@ -98,6 +113,10 @@ gpio export 17 out
 node node/05-switch-stream.js
 ```
 * Go to http://[your_ip_address]:8080/ to view button logging
+* High five if: the web page is appended with a "1" whenever the button is pressed down, and a "0" when it's released
+* Can you...
+  * Replace "1" and "0" with "Ding" and "Dong"?
+  * Format the logged inputs as a JSON feed?
 
 ## 06 - Room reservations
 Use the Google Calendar API to pull event data and light an LED if a
@@ -125,6 +144,11 @@ cd ~/gpio-examples/ruby
 mkdir tmp
 sudo ruby 06-room-reservations.rb
 ```
+* High five if: the LED is lit when there's an event in progress and otherwise is turned off. Note that there may be up to a 30-second delay from the time an event is updated on the calendar to the time the LED switches on or off. This prevents us from bombarding the server with too many API requests.
+* Can you...
+  * Only change the LED when the event is held in a particular location?
+  * Add a green LED that lights up when there's no event in progress?
+
 
 ## Contact Information
 Email me if you have any questions.<br />
