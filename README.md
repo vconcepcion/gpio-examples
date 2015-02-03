@@ -77,18 +77,18 @@ Play an MP3 file based on input from a button/switch
 ![Switch audio](/img/04-switch-audio.png?raw=true "Switch audio")
 * Download a sample audio file
 ```
-mkdir ~/audio
-wget http://goo.gl/MOXGX3 -O ~/audio/example.mp3 --no-check-certificate
+mkdir /home/pi/audio
+wget http://goo.gl/MOXGX3 -O /home/pi/audio/example.mp3 --no-check-certificate
 ```
 * Run one of the following code samples
 
 ```
-sudo python python/04-switch-audio.py ~/audio/example.mp3
+sudo python python/04-switch-audio.py /home/pi/audio/example.mp3
 
-sudo ruby ruby/04-switch-audio.rb ~/audio/example.mp3
+sudo ruby ruby/04-switch-audio.rb /home/pi/audio/example.mp3
 
 gpio mode 1 down
-node node/04-switch-audio.js ~/audio/example.mp3
+node node/04-switch-audio.js /home/pi/audio/example.mp3
 ```
 * High five if: the MP3 plays whenever you press the button
 * Can you...
@@ -140,7 +140,7 @@ API_KEY = "__YOUR_API_KEY__"
 * Run the following
 
 ```
-cd ~/gpio-examples/ruby
+cd /home/pi/gpio-examples/ruby
 mkdir tmp
 sudo ruby 06-room-reservations.rb
 ```
