@@ -130,7 +130,7 @@ room is reserved on the calendar (i.e., event is currently in progress)
 ![Calendar API](/img/calendar-api.png?raw=true "Calendar API")
 * Create an API access key
 ![Public API key](/img/public-api-key.png?raw=true "Public API key")
-* Create a Google Calendar with events and find its ID under "Calendar Settings"
+* Create a Google Calendar with events and find its ID under "Calendar Settings". Also, make sure that the calendar has public access.
 ![Calendar ID](/img/calendar-id.png?raw=true "Calendar ID")
 * Update the `CALENDAR_ID` and `API_KEY` values
 ```
