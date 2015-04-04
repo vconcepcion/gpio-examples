@@ -34,7 +34,7 @@ Read input from a button/switch
 
 * Build the circuit
 ![Switch](/img/02-switch.png?raw=true "Switch")
-* Run one of the following code samples
+* Run one of the following code samples (hit Ctrl+C when done to stop running it)
 
 ```
 sudo python python/02a-switch.py
@@ -56,7 +56,7 @@ Blink an LED based on input from a button/switch
 
 * Build the circuit
 ![Switch LED](/img/03-switch-led.png?raw=true "Switch LED")
-* Run one of the following code samples
+* Run one of the following code samples (hit Ctrl+C when done to stop running it)
 
 ```
 sudo python python/03-switch-led.py
@@ -80,7 +80,7 @@ Play an MP3 file based on input from a button/switch
 mkdir /home/pi/audio
 wget http://goo.gl/MOXGX3 -O /home/pi/audio/example.mp3 --no-check-certificate
 ```
-* Run one of the following code samples
+* Run one of the following code samples (hit Ctrl+C when done to stop running it)
 
 ```
 sudo python python/04-switch-audio.py /home/pi/audio/example.mp3
@@ -92,8 +92,8 @@ node node/04-switch-audio.js /home/pi/audio/example.mp3
 ```
 * High five if: the MP3 plays whenever you press the button
 * Can you...
-  * Make it play a different MP3?
-  * Setup multiple buttons that each play a different drum kit sound?
+  * Make it play your favorite song?
+  * Setup a drum kit using multiple buttons?
 
 ## 05 - Switch stream
 Stream button input to a web page (Full tutorial: https://learn.adafruit.com/node-embedded-development/why-node-dot-js)
@@ -105,18 +105,17 @@ Stream button input to a web page (Full tutorial: https://learn.adafruit.com/nod
 eth0: ...
     inet 192.168.1.21/24 ...
 ```
-* Run the following
+* Run the following (hit Ctrl+C when done to stop running it)
 
 ```
 gpio export 18 in
-gpio export 17 out
 node node/05-switch-stream.js
 ```
 * Go to http://[your_ip_address]:8080/ to view button logging
 * High five if: the web page is appended with a "1" whenever the button is pressed down, and a "0" when it's released
 * Can you...
-  * Replace "1" and "0" with "Ding" and "Dong"?
-  * Format the logged inputs as a JSON feed?
+  * Edit the Node example "02 - Switch" to keep track of the number of button presses and publish the count to a web page? Hint: instead of streaming input with `button.pipe(res)`, write the current count as a string to the HTTP response and call `res.end()`.
+  * Download/install [ngrok](https://ngrok.com) and run `./ngrok 8080` to make your page available on a public internet address.
 
 ## 06 - Room reservations
 Use the Google Calendar API to pull event data and light an LED if a
@@ -130,14 +129,14 @@ room is reserved on the calendar (i.e., event is currently in progress)
 ![Calendar API](/img/calendar-api.png?raw=true "Calendar API")
 * Create an API access key
 ![Public API key](/img/public-api-key.png?raw=true "Public API key")
-* Create a Google Calendar with events and find its ID under "Calendar Settings". Also, make sure that the calendar has public access.
+* Create a Google Calendar with events and find its ID under "Calendar Settings". Important: make sure that the calendar has public access.
 ![Calendar ID](/img/calendar-id.png?raw=true "Calendar ID")
 * Update the `CALENDAR_ID` and `API_KEY` values
 ```
 CALENDAR_ID = "__YOUR_CALENDAR_ID__"
 API_KEY = "__YOUR_API_KEY__"
 ```
-* Run the following
+* Run the following (hit Ctrl+C when done to stop running it)
 
 ```
 cd /home/pi/gpio-examples/ruby

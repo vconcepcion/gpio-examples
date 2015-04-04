@@ -3,17 +3,13 @@
 
    Before running this, run the following commands:
      $ gpio export 18 in
-     $ gpio export 17 out
 */
 var GpioStream = require('gpio-stream'),
     http = require('http'),
-    button = GpioStream.readable(18),
-    led = GpioStream.writable(17);
-
-var stream = button.pipe(led);
+    button = GpioStream.readable(18);
 
 http.createServer(function (req, res) {
   res.setHeader('Content-Type', 'text/html');
   res.write('<pre>logging button presses:\n');
-  stream.pipe(res);
+  button.pipe(res);
 }).listen(8080);
